@@ -13,8 +13,10 @@ A voice transcription app that records audio from a USB microphone and transcrib
 ## Hardware Requirements
 
 - Tufty 2350 badge
-- USB microphone compatible with I2S interface
+- I2S digital microphone (e.g., INMP441, ICS-43434, or similar)
 - WiFi connection for API access
+
+**Note**: This app requires an I2S digital microphone, not a USB microphone. The microphone must be connected to the badge's I2S pins.
 
 ## Setup
 
@@ -35,14 +37,16 @@ ELEVENLABS_API_KEY = "your_elevenlabs_api_key"
 3. Copy your API key
 4. Add it to `secrets.py`
 
-### 3. Connect USB Microphone
+### 3. Connect I2S Microphone
 
-Connect a USB microphone to the badge. The app is configured to use I2S pins:
+Connect an I2S digital microphone (such as INMP441 or ICS-43434) to the badge using these pins:
 - Serial Clock (SCK): Pin 18
-- Word Select (WS): Pin 19
+- Word Select (WS): Pin 19  
 - Serial Data (SD): Pin 20
+- Ground (GND): Connect to badge ground
+- VCC: Connect to 3.3V power
 
-**Note**: Pin configuration may need adjustment based on your specific USB microphone hardware.
+**Important**: This app requires an I2S digital microphone module, not a standard USB or analog microphone. I2S microphones are small breakout boards available from electronics suppliers.
 
 ## Usage
 
@@ -72,8 +76,9 @@ Connect a USB microphone to the badge. The app is configured to use I2S pins:
 - Verify the network is 2.4GHz (5GHz not supported)
 
 ### "Audio init error"
-- Verify USB microphone is properly connected
-- Check that the microphone is compatible with I2S interface
+- Verify I2S microphone is properly connected to pins 18, 19, 20
+- Check power (3.3V) and ground connections
+- Ensure you're using a compatible I2S digital microphone (INMP441, ICS-43434, etc.)
 - Try reconnecting the microphone
 
 ### "API error"
@@ -100,7 +105,7 @@ Connect a USB microphone to the badge. The app is configured to use I2S pins:
 - Recording length is limited by buffer size (~2 seconds at 16kHz)
 - Requires active internet connection
 - API usage counts against your ElevenLabs quota
-- USB microphone must be I2S compatible
+- Requires I2S digital microphone hardware (not standard USB or analog microphones)
 
 ## Development Notes
 

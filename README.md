@@ -134,12 +134,12 @@ Keep all stats above 30% or Mona will get sad! Stats are automatically saved.
 An IR beacon scavenger hunt for exploring the conference. Walk around and look for "Mona's Quest" signs to find IR beacons at different locations to unlock quest achievements. Progress is saved automatically.
 
 ### Scribe
-An audio transcription app powered by ElevenLabs Scribe. Record your voice using a USB microphone and get instant transcriptions:
+An audio transcription app powered by ElevenLabs Scribe. Record your voice using an I2S digital microphone and get instant transcriptions:
 - Press A to start recording
 - Press A again to stop and transcribe
 - Press C to clear transcript
 
-Requires WiFi configuration and ElevenLabs API key in `/secrets.py`. See `badge/apps/scribe/README.md` for setup details.
+Requires WiFi configuration, ElevenLabs API key in `/secrets.py`, and an I2S microphone (INMP441 or similar). See `badge/apps/scribe/README.md` for setup details.
 
 ### Sketch
 A drawing application where you can create pixel art. Use arrow keys and A/C to move the cursor and draw. Watch Mona run away from your cursor!

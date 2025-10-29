@@ -116,9 +116,9 @@ def init_audio():
     global i2s
     
     try:
-        # Initialize I2S for audio input
-        # Pin configuration for USB microphone via I2S
-        # These pins may need adjustment based on hardware
+        # Initialize I2S for audio input from digital microphone (e.g., INMP441, ICS-43434)
+        # Pin configuration for I2S digital microphone
+        # Standard pins: SCK=18, WS=19, SD=20
         i2s = machine.I2S(
             0,
             sck=machine.Pin(18),   # Serial clock
