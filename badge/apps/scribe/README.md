@@ -1,6 +1,6 @@
 # ElevenLabs Scribe - Audio Transcription App
 
-A voice transcription app that records audio from a USB microphone and transcribes it using the ElevenLabs Scribe API.
+A voice transcription app that records audio from an I2S digital microphone and transcribes it using the ElevenLabs Scribe API.
 
 ## Features
 
